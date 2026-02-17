@@ -1,2 +1,3 @@
 data/ml-latest/*.csv
 .ipynb_checkpoints/
+.idea/
