@@ -72,7 +72,7 @@ class MovieGUI(QMainWindow):
     def load_data(self):
         try:
             self.embeddings = np.load('models/embeddings_ga.npy')
-            self.df = pd.read_csv('data/movie_lookup.csv')
+            self.df = pd.read_csv('data/movie_index.csv')
             return
         except Exception as e:
             print(f"Could not load from models/: {e}")
@@ -94,7 +94,7 @@ class MovieGUI(QMainWindow):
             v.addWidget(error)
 
             instructions = QLabel(
-                'Please run the genetic_algorithm.ipynb notebook first,\n'
+                'Please run the 02_genetic_algorithm.ipynb notebook first,\n'
                 'then run the save cell to create models/embeddings_ga.npy'
             )
             v.addWidget(instructions)
@@ -148,7 +148,7 @@ class MovieGUI(QMainWindow):
 
     def recommend(self):
         if self.df is None or self.embeddings is None:
-            QMessageBox.warning(self, 'Error', 'Model not loaded. Please run genetic_algorithm.ipynb first.')
+            QMessageBox.warning(self, 'Error', 'Model not loaded. Please run 02_genetic_algorithm.ipynb first.')
             return
 
         self.out.setText('Processing...')
