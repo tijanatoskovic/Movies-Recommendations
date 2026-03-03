@@ -2,7 +2,21 @@
 
 ## Project Overview
 
-This project implements a movie recommendation system using **genetic algorithm** to train a **neural network**. Instead of traditional backpropagation, we use evolutionary optimization to find optimal network weights.
+This project implements a movie recommendation system using **genetic algorithm** to train an **autoencoder**. Instead of traditional backpropagation, we use evolutionary optimization to find optimal network weights.
+
+## Build
+
+Make sure you have **Python 3.10+** installed.
+
+Install the required libraries using pip:
+
+```
+pip install numpy pandas matplotlib tensorflow jupyter
+```
+
+## Graphical User Interface
+
+![gui](resources/gui.gif)
 
 ## Credits
 
